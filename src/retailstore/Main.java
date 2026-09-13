@@ -70,7 +70,7 @@ public class Main {
 
         String id = input.readRequiredString("Mã sản phẩm: ");
         String name = input.readRequiredString("Tên sản phẩm: ");
-        double price = input.readDouble("Giá: ", 0, Double.MAX_VALUE);
+        double price = input.readDouble("Giá: ", 0);
         int quantity = input.readInt("Số lượng tồn kho: ", 0, Integer.MAX_VALUE);
 
         Product product;
@@ -115,7 +115,7 @@ public class Main {
         }
 
         String name = input.readRequiredString("Tên mới: ");
-        double price = input.readDouble("Giá mới: ", 0, Double.MAX_VALUE);
+        double price = input.readDouble("Giá mới: ", 0);
         int quantity = input.readInt("Tồn kho mới: ", 0, Integer.MAX_VALUE);
 
         Product newProduct;
