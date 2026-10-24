@@ -1,13 +1,12 @@
-# Quản lý cửa hàng bán lẻ - OOP
+# Quản lý cửa hàng bán lẻ - OOP - Nhóm 4
 
-Project Java bám theo sơ đồ lớp đã chốt, **không sử dụng nghiệp vụ Shift/Ca làm việc**.
-
+Project Java bám theo sơ đồ lớp đã chốt, 
 ## Cây kế thừa
 - `Product` (abstract)
   - `Food`
   - `Electronics`
   - `Clothing`
-- `Employee` (abstract)
+- `Employee` 
   - `Manager`
   - `Staff`
 
@@ -37,11 +36,11 @@ Project Java bám theo sơ đồ lớp đã chốt, **không sử dụng nghiệ
 ## Kỹ thuật OOP
 - Encapsulation: thuộc tính `private`, getter/setter.
 - Validation trong setter và phương thức nghiệp vụ.
-- Abstraction: `Product`, `Employee` là abstract class.
+- Abstraction: `Product` là abstract class.
 - Inheritance: 2 cây kế thừa.
 - Polymorphism: xử lý nhiều loại Product bằng `List<Product>`.
 - Interface: `Sellable`, `Discountable`.
-- Overriding: `displayInfo()`, `getCategory()`, `toString()`, `equals()`, `work()`.
+- Overriding: displayInfo(), getCategory(), toString(), equals(), work().
 - Overloading: constructor và `addProduct()` / `addStaff()`.
 - Composition: Order tạo và sở hữu OrderItem.
 - Static/final: hằng trạng thái đơn hàng và hằng tiêu đề.
@@ -54,8 +53,6 @@ Khi khách hàng thanh toán, hóa đơn hiển thị:
 - Danh sách sản phẩm.
 - Tổng tiền.
 
-Không còn `Shift`, `getShift()`, `setShift()` hoặc chức năng quản lý ca.
-
 ## Báo cáo
 - Báo cáo doanh thu.
 - Báo cáo tồn kho.
@@ -64,8 +61,8 @@ Không còn `Shift`, `getShift()`, `setShift()` hoặc chức năng quản lý c
 JDK 17+:
 
 ```bash
-javac -encoding UTF-8 -d out src/retailstore/*.java
-java -cp out retailstore.Main
+javac -encoding UTF-8 -d out src/Main.java src/helper/*.java src/models/*.java src/services/*.java
+java -cp out Main
 ```
 
 ## Git commit
@@ -79,3 +76,8 @@ Lịch sử Git được tổ chức theo từng nhóm chức năng để dễ t
 7. Bổ sung báo cáo.
 8. Hoàn thiện kiểm tra input và menu.
 9. Loại bỏ nghiệp vụ Shift theo thiết kế cuối cùng.
+
+## Danh sách thành viên gồm có:
+1. Trần Duy Binh(C) | 2603ITA0021
+2. Đặng Trần Minh   | 2603ITA0028
+3. Dương Công Khánh | 2603ITA0020 

@@ -1,0 +1,119 @@
+DỮ LIỆU MẪU - QUẢN LÝ CỬA HÀNG BÁN LẺ
+
+==================================================
+1. THÔNG TIN CỬA HÀNG
+Tên cửa hàng: Cửa hàng bán lẻ
+Địa chỉ: Huế
+==================================================
+2. DANH SÁCH NHÂN VIÊN
+# employeeId | employeeName | phone | position
+
+QL01 | Trần Duy Binh | 0900000001 | Manager
+NV01 | Trần Thị Thu Ngân | 0900000002 | Staff
+
+==================================================
+3. QUAN HỆ QUẢN LÝ NHÂN VIÊN
+# managerId | staffId
+
+QL01 | NV01
+
+==================================================
+4. DANH SÁCH SẢN PHẨM
+[FOOD]
+
+# id | name | price | quantity | expiryDate | foodType
+
+F01 | Sữa tươi | 32000 | 50 | 2026-12-31 | Đồ uống
+
+[ELECTRONICS]
+# id | name | price | quantity | brand | warrantyMonths
+
+E01 | Tai nghe Bluetooth | 450000 | 20 | Sony | 12
+
+[CLOTHING]
+# id | name | price | quantity | size | color
+
+C01 | Áo thun | 180000 | 30 | M | Đen
+
+==================================================
+5. KHÁCH HÀNG
+
+Customer được tạo khi thực hiện chức năng "Tạo đơn + thanh toán".
+
+# id | name | phone
+
+[Nhập khi chạy chương trình]
+
+==================================================
+6. ĐƠN HÀNG
+
+Order được tạo khi thực hiện chức năng "Tạo đơn + thanh toán".
+# orderId | customerId | cashierId | managerId
+
+[Nhập khi chạy chương trình]
+
+Nhân viên tính tiền mặc định:
+NV01 - Trần Thị Thu Ngân
+
+Quản lý phụ trách mặc định:
+QL01 - Trần Duy Binh
+
+==================================================
+7. CHI TIẾT ĐƠN HÀNG
+OrderItem được tạo khi người dùng chọn sản phẩm và số lượng trong lúc thanh toán.
+
+# orderId | productId | quantity | unitPrice
+
+[Dữ liệu phát sinh khi chạy chương trình]
+
+==================================================
+8. GHI CHÚ
+- Giá sản phẩm:
+  F01 = 32000
+  E01 = 450000
+  C01 = 180000
+
+- Số lượng tồn kho ban đầu:
+  F01 = 50
+  E01 = 20
+  C01 = 30
+
+- Food:
+  expiryDate = 2026-12-31
+  foodType = Đồ uống
+
+- Electronics:
+  brand = Sony
+  warrantyMonths = 12
+
+- Clothing:
+  size = M
+  color = Đen
+
+- Khi thanh toán, chương trình yêu cầu:
+  Mã khách hàng
+  Tên khách hàng
+  Số điện thoại khách hàng
+  Mã đơn
+  Mã sản phẩm
+  Số lượng
+
+- Chương trình hiện tại khởi tạo dữ liệu mẫu trực tiếp trong
+  phương thức seed() của Main.java. File này dùng để lưu trữ
+  và tham khảo dữ liệu mẫu theo cấu trúc của project.
+
+==================================================
+9. ĐỐI CHIẾU VỚI MAIN.JAVA
+Store:
+  Cửa hàng bán lẻ - Huế
+
+Manager:
+  QL01 - Trần Duy Binh
+
+Staff:
+  NV01 - Trần Thị Thu Ngân
+
+Products:
+  F01 - Sữa tươi
+  E01 - Tai nghe Bluetooth
+  C01 - Áo thun
